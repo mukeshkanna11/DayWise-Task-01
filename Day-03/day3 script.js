@@ -1,96 +1,97 @@
 //DAY-03!!!
 
-//function
+//Function:
 
-//normal function:
+//Normal function:
 
 //function guvi(){} // This is the syntax of function 
 
-// function guvi(){
-//     console.log("HTML");
+function guvi(){
+    console.log("HTML");
     
-// } 
-// guvi()
+} 
+guvi() //'HTML'
 
-// let a=60
-// function guvi(){
-//     console.log("Block of Code");
-//     console.log(a);
+let a=60
+function normFun(){
+    console.log("Block of Code"); // 'Block of Code'
+    console.log(a);
     
-// } 
-// guvi()
+} 
+normFun()
 
 //Arrow Function:
 
-// const arrFun=()=>{ }  // This is the syntax of arrow function
+//const arrFun=()=>{ }  // This is the syntax of arrow function
 
-// const arrFun=()=>{
-//     console.log("Shortout Hoisting Issue");
+const arrFun=()=>{
+    console.log("Shortout Hoisting Issue"); // 'Shortout Hoisting Issue'
     
-//  }
-//  arrFun()
+ }
+ arrFun()
 
-//  const arrFun1=()=>{
-//     console.log("minimize size");
+ const arrFun1=()=>{
+    console.log("Minimize Size"); // 'Minimize Size'
     
-//  }
-//  arrFun1()
+ }
+ arrFun1()
 
-//  const arrFun2=()=>{
-//     console.log("retuen value");
+ const arrFun2=()=>{
+    console.log("Return Value"); // 'Return Value'
     
-//  }
-//  arrFun2()
+ }
+ arrFun2()
 
  //Annonymous Function:
      
-//  const parameter=function(){}  //annonymous function syntax
+ //const parameter=function(){}  //annonymous function syntax
 
-// const parameter=function(a,b){
+const parameter=function(a,b){
 
-//     console.log(a,b);
+    console.log(a,b); // [10,30]
     
-// }
-// parameter(10,30);
+}
+parameter(10,30);
 
 //IIFE Function:
 
 // (function(){})();  Syntax of IIFE Function
 
-// (function(){
-//     console.log("IIFE");
+(function(){
+    console.log("IIFE"); // 'IIFE'
     
-// })()    //Automatically call
+})()    //Automatically call
 
-// let y=132;
+let y=132;
 
-// (function(){
-//     console.log("IIFE");
-//     let y=456
-//     console.log(y);
+(function(){
+    console.log("IIFE"); // 'IIFE'
+    let y=456
+    console.log(y); // 456
                           
-// })()
-// console.log(y); // it's only access of own block
+})()
+console.log(y); // 132
+ // it's only access of own block
 
 //HOF (Higher Order Function)
 
-// function retFun(a,b){    // (a,b) params
-//      console.log("ReturnFunction");
+function retFun(a,b){    // (a,b) params
+     console.log("ReturnFunction"); // 'ReturnFunction'
      
-//      return(a+b);  //return function
-// }
-// let val=(retFun(100,50))
-// console.log(val);
+     return(a+b);  //return function
+}
+let val=(retFun(100,50))
+console.log(val); // 150
 
-// function vag(x,y){
-//      console.log("bot");
-//      return(x-y)
-// }
-// let val=(vag(10,25))
-// console.log(val);
+function vag(x,y){
+     console.log("bot");
+     return(x-y)
+}
+let value=(vag(10,25))
+console.log(value); // -15
 
 // function java(){
-//      console.log("JavaScript");
+//      console.log("JavaScript"); // 'JavaScript'
      
 //      function node(){
 //           console.log("Node.js");
@@ -99,95 +100,99 @@
      
 // }
 // java()
-// node()   // node() is not define because, node is local scope not global scope
+// node()  
+
+// node() is not define because, node is local scope not global scope
          // How to call node() outside of java() // This is interview Questions?
 
-     //     function java(){
-     //      console.log("JavaScript");
+         function java1(){
+          console.log("JavaScript1"); // 'JavaScript1'
           
-     //       return function node(){
-     //           console.log("Node.js");
+           return function node1(){
+               console.log("Node.js1"); // 'node.js1'
                
-     //      }
+          }
           
-     // }
-     // const node=java()
-     // node() // Got it Output From Return Function Method
+     }
+     const node1=java1()
+     node1()  // Got it Output From Return Function Method
 
-     // function java(){
-     //      console.log("JavaScript");
+     function java(){
+          console.log("JavaScript");  // 'JavaScript1'
           
-     //        global.node=function node(){
-     //           console.log("Node.js");
+            global.node=function node(){
+               console.log("Node.js"); // 'node.js1'
                
-     //      }
+          }
           
-     // }
-     // java()
-     // node()  // Another way to get output from global scope
+     }
+     java()
+     node()  // Another way to get output from global scope.
 
-     // function top(){
-     //      console.log("topFun");
 
-     //      function bot(){
-     //           console.log("botFun");
+     function top(){
+          console.log("topFun"); // 'topFun'
+
+          function bot(){
+               console.log("botFun");
                
-     //      }
+          }
           
-     // }
-     // top()
-     // bot()
+     }
+     top()
+     bot() // bot() cannot access
 
-     // function top(){
-     //      console.log("topFun");
+     function top(){
+          console.log("topFun"); // 'topFun'
 
-     //       return function bot(){
-     //           console.log("botFun");
+           return function bot(){
+               console.log("botFun");  // 'botFun'
                
-     //      }
+          }
           
-     // }
-     // const bot=top() 
-     // bot()             //  1st Method (call return function)
+     }
+     const bot=top() 
+     bot()             //  1st Method (call return function)
 
-// function top(){
-//      console.log("topFun");
+function top(){
+     console.log("topFun"); // 'topFun'
 
-//      globalThis.bot= function(bot){
-//           console.log("botFun");
+     globalThis.bot= function(bot){
+          console.log("botFun"); // 'botFun'
           
-//      }
-// }
-// top()
-// bot()       // 2nd Method (call local to global function)
+     }
+}
+top()
+bot()       // 2nd Method (call local to global function).
+
 
 // If Else - Condition:
 
-// let age=18
+let age=18
 
-// if(age>18){
-//      console.log("Adult");
+if(age>18){
+     console.log("Adult");
      
-// } else;{
-//      console.log("Not Adult");
+} else;{
+     console.log("Not Adult"); // 'Not Adult'
      
-// }
+}
 
-// let mark=86
+let mark=86
 
-// if(mark>=80){
-//      console.log("A Grade");
+if(mark>=80){
+     console.log("A Grade"); // 'A Grade'
      
-// } else if(mark>=70){
-//      console.log("b Grade");
+} else if(mark>=70){
+     console.log("b Grade");
      
-// } else if(mark>=60){
-//      console.log("grade c");
+} else if(mark>=60){
+     console.log("grade c");
      
-// }esle;{
-//      console.log("not eligible");
+}esle;{
+     console.log("not eligible");
      
-// }
+}
 
 let attendance=81
 
@@ -201,6 +206,6 @@ if(attendance<=80){
      console.log("NO IR CRITERIA");
      
 }else;{
-     console.log("IR CRITERIA");
+     console.log("IR CRITERIA"); // 'IR CRITERRIA'
      
 } //
