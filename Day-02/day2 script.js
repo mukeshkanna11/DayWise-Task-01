@@ -2,83 +2,83 @@
 
 // 1.Alerts & Prompts:
 
-// alert("User Name Is Found") // its has only OK Button.
+alert("Welcome to Full Stack Development"); // its has only OK Button.
 
-// let names=prompt ("Enter the age") // sting value
-// console.log(names); // It's display browser console and it's shows OK & CANCEL button.
+ let names=prompt ("Enter the age") // sting value
+ console.log(names); // It's display browser console and it's shows OK & CANCEL button.
 
-// let a=number(prompt ("Enter the value")) // number value
-// console.log(a); 
+ let a=number(prompt ("Enter the value")) // number value
+console.log(a); 
 
 // 2. Operators- Arithmetic & Logical
 
      // Arithmetic Operators:
           
-    //  let b=12
-    //  let c=4
-    //  console.log(b+c);
-    //  console.log(b-c);
-    //  console.log(b*c);
-    //  console.log(b/c);
-    //  console.log(b%c);
-    //  console.log(b**c);
+     let b=12
+     let c=4
+     console.log(b+c); //16
+     console.log(b-c); //8
+     console.log(b*c); //48
+     console.log(b/c); //3
+     console.log(b%c); //0
+     console.log(b**c); //20736
 
-     // Logical Operators:
+     //Logical Operators:
 
-    //  let d=true
-    //  let e=false
-    //  console.log(d&&e);    
-    //  console.log(d||e);    
-    //  console.log(d!=e);    
+     let d=true
+     let e=false
+     console.log(d&&e); //false  
+     console.log(d||e); //true  
+     console.log(d!=e); //true  
 
 
      //and:    // && syntax od And // Output true means both values are true
 
-// let d=true
-// let e=false
-// console.log(c&&d);
+let f=true
+let g=false
+console.log(f&&g); //false
 
-// let d=true
-// let e=true
-// console.log(e&&d);
+let i=true
+let h=true
+console.log(h&&i); //false
 
-// let x=false
-// let y=false
-// console.log(y&&x);
+let j=false
+let k=false
+console.log(j&&k); //false
 
 //or :    // || syntax od OR // Output true means atleast values are true
  
-// let d= false
-// let e= false
-// console.log(e||d);
+let l= false
+let m= false
+console.log(l||m); //false
 
-// let d= false
-// let e= true
-// console.log(e||d);
+let n= false
+let o= true
+console.log(n||o); //true
 
-// let d= true
-// let e= true
-// console.log(e||d);
+let p= true
+let q= true
+console.log(p||q); //true
 
 //not :   // != syntax od NOT // totally opposite of OR
 
 
-// let d= true
-// let e= true
-// console.log(d!=e);
+let r= true
+let s= true
+console.log(r!=s); //false
 
-// let d= true
-// let e= false
-// console.log(e!=d);
+let t= true
+let u= false
+console.log(t!=u); //true
 
 
 //3.Variables and Datatypes?
 
-// var name="Mukesh"         // var define Global Scope
-// console.log(name);
+var name="Mukesh"         // var define Global Scope
+console.log(name);
 
-// let age=23                // let define Local Scope
-// console.log(age);
+let age=23                // let define Local Scope
+console.log(age);
 
-// const state="Tamilnadu"    // const define cannot reassigned
-// console.log(state);
+const state="Tamilnadu"    // const define cannot reassigned
+console.log(state);
