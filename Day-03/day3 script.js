@@ -90,20 +90,21 @@ function vag(x,y){
 let value=(vag(10,25))
 console.log(value); // -15
 
-// function java(){
-//      console.log("JavaScript"); // 'JavaScript'
+function java(){
+     console.log("JavaScript"); // 'JavaScript'
      
-//      function node(){
-//           console.log("Node.js");
+     function node(){
+          console.log("Node.js");
           
-//      }
+     }
      
-// }
-// java()
-// node()  
+}
+java()
+node()  // node() is not define because, node is local scope not global scope
 
-// node() is not define because, node is local scope not global scope
-         // How to call node() outside of java() // This is interview Questions?
+         // How to call node() outside of java() 
+         
+         // This is interview Questions?
 
          function java1(){
           console.log("JavaScript1"); // 'JavaScript1'
@@ -130,41 +131,7 @@ console.log(value); // -15
      node()  // Another way to get output from global scope.
 
 
-     function top(){
-          console.log("topFun"); // 'topFun'
-
-          function bot(){
-               console.log("botFun");
-               
-          }
-          
-     }
-     top()
-     bot() // bot() cannot access
-
-     function top(){
-          console.log("topFun"); // 'topFun'
-
-           return function bot(){
-               console.log("botFun");  // 'botFun'
-               
-          }
-          
-     }
-     const bot=top() 
-     bot()             //  1st Method (call return function)
-
-function top(){
-     console.log("topFun"); // 'topFun'
-
-     globalThis.bot= function(bot){
-          console.log("botFun"); // 'botFun'
-          
-     }
-}
-top()
-bot()       // 2nd Method (call local to global function).
-
+     
 
 // If Else - Condition:
 
@@ -209,3 +176,110 @@ if(attendance<=80){
      console.log("IR CRITERIA"); // 'IR CRITERRIA'
      
 } //
+
+//Ternary operator:
+
+let votingage=16
+
+let canVote = (votingage >= 18) ? "Yes" : "No";
+
+console.log("Can vote: " + canVote); // 'CanVote NO'
+
+
+// Switch case:
+
+let day = "Monday";
+
+switch (day) {
+  case "Monday":
+    console.log("Start the routine work."); // 'Start the routine work'
+    break;
+  case "Friday":
+    console.log("Exciting at weekend.");
+    break;
+  case "Saturday":
+    console.log(" Jolly Weekend!");
+    break;
+  default:
+    console.log("Boring day.");
+}
+
+// While Loop:
+
+//while (condition) {} // syntax
+
+function loop(){
+     return function(){
+         let i;
+         for(i=2;i<7;i++){
+             console.log("i="+i); // 'i=2','i=3','i=4',i='5',i='6'
+         }
+     }  
+ }
+ let output=loop();
+ output();
+
+ //Do-While loop:
+
+ function doWhileLoop(callback,condition){  //  initiate a function with callback in do statement
+     do{
+         callback();
+     }while(condition());
+ }
+ 
+ let count=0;                    //  create a function for do statement with values
+ 
+ function down(){                 
+     console.log("count is:"+count); // output- 'count is:0','count is:1'
+     count++;
+ }
+ function check(){               //   create a condition function for while statement
+     return count<2;
+ }
+ doWhileLoop(down,check);
+ 
+ // For Loop:
+
+ for (let i=0; i>3; i++){
+     console.log("i",i); //['i',0],['i',1],['i',2]
+     
+ }
+
+ // Interview Questions:
+
+ function top(){
+     console.log("topFun"); // 'topFun'
+
+     function bot(){
+          console.log("botFun");
+          
+     }
+     
+}
+top()
+bot() // bot() cannot access //How to call bot outside of top?
+
+function top(){
+     console.log("topFun"); // 'topFun'
+
+      return function bot(){
+          console.log("botFun");  // 'botFun'
+          
+     }
+     
+}
+const bot=top() 
+bot()             //  1st Method (call return function)
+
+function top(){
+console.log("topFun"); // 'topFun'
+
+globalThis.bot= function(bot){
+     console.log("botFun"); // 'botFun'
+     
+}
+}
+top()
+bot()       // 2nd Method (call local to global function).
+
+

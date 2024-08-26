@@ -29,7 +29,7 @@ Types of Functions in JavaScript?
   // Single Threated Synchronous language excute line by line.
   // Single Threated Asynchronous language excute jump next line before 1st line excute
 
-// If Else - Condition?
+2. If Else - Condition?
 
  JavaScript are used to execute different blocks
  of code based on different conditions. They are fundamental to
@@ -47,3 +47,29 @@ Types of Functions in JavaScript?
  statement. It takes three operands: a condition, an expression to
  execute if the condition is true, and an expression to execute if
  the condition is false.
+
+  // Swith Case?
+    The switch statement is an alternative to multiple if-else if
+ statements. It compares the value of a variable against multiple
+ cases and executes the corresponding block of code.
+
+ 3. While Loop?
+ ● The while loop is used to repeatedly execute a block of code as
+ long as a specified condition is true.
+ ● Before each iteration, the condition is checked. If the condition
+ is true, the code block is executed. If the condition is false,
+ the loop stops.
+
+ //Do-While Loop?
+ ● The do-while loop is similar to the while loop, but with one key
+ difference: the code block is executed at least once before the
+ condition is tested.
+ ● The condition is checked after the code block has executed, so
+ the loop runs at least once, even if the condition is false
+ initially.
+
+ // For-loop?
+  The for loop is one of the most commonly used loops in JavaScript. It
+ is designed to execute a block of code a specific number of times,
+ making it ideal for scenarios where you know in advance how many times
+ you want to iterate.
