@@ -2,13 +2,13 @@
 
 DAY-01
 
-●	What is a full-stack web development
-●	Introduction to Web browser JavaScript V8
-●	How the Server looks at the URL
-●	Browser js vs Node js
-●	What is Frontend, Backend & Databases
-●	Evolution of HTTP, HTTP Methods
-●	Request & Response cycle
+●	What is a full-stack web development?
+●	Introduction to Web browser JavaScript V8?
+●	How the Server looks at the URL?
+●	Browser js vs Node js?
+●	What is Frontend, Backend & Databases?
+●	Evolution of HTTP, HTTP Methods?
+●	Request & Response cycle?
 
 1. What is Full Stack Web Development?
 
